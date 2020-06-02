@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django_heroku #This is an additional line before Heroku deployment
+import dj_database_url #This is an additional line before Heroku deployment
+from decouple import config #This is an additional line before Heroku deployment
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -48,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', #This is an additional line before Heroku deployment
 ]
 
 ROOT_URLCONF = 'DenWeb.urls'
@@ -123,7 +127,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' #This is an additional line before Heroku deployment
 '''
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -145,3 +149,5 @@ EMAIL_USE_TLS = False
 # TEMPLATE_DIRS = (
 #     os.path.join(BASE_DIR, 'templates'),
 # )
+
+django_heroku.settings(locals())
