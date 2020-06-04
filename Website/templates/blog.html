@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,10 +12,10 @@
   <title>Dento - Dentist &amp; Medical HTML Template</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="./img/core-img/favicon.ico">
+  <link rel="icon" href="{% static 'Website/img/core-img/favicon.ico' %}">
 
   <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{% static 'Website/css/style.css' %}">
 
 </head>
 
@@ -62,7 +63,7 @@
           <nav class="classy-navbar justify-content-between" id="dentoNav">
 
             <!-- Logo -->
-            <a class="nav-brand" href="index.html"><img src="./img/core-img/logo.png" alt=""></a>
+            <a class="nav-brand" href="{% url 'home' %}"><img src="{% static 'Website/img/core-img/logo.png' %}" alt=""></a>
 
             <!-- Navbar Toggler -->
             <div class="classy-navbar-toggler">
@@ -80,16 +81,16 @@
               <!-- Nav Start -->
               <div class="classynav">
                 <ul id="nav">
-                  <li><a href="index.html">Home</a></li>
+                  <li><a href="{% url 'home' %}">Home</a></li>
                   <li><a href="#">Pages</a>
                     <ul class="dropdown">
-                      <li><a href="index.html">- Home</a></li>
-                      <li><a href="about.html">- About Us</a></li>
-                      <li><a href="service.html">- Service</a></li>
-                      <li><a href="pricing.html">- Pricing</a></li>
-                      <li><a href="blog.html">- Blog</a></li>
-                      <li><a href="blog-details.html">- Blog Details</a></li>
-                      <li><a href="contact.html">- Contact</a></li>
+                      <li><a href="{% url 'home' %}">- Home</a></li>
+                      <li><a href="{% url 'about' %}">- About Us</a></li>
+                      <li><a href="{% url 'service' %}">- Service</a></li>
+                      <li><a href="{% url 'pricing' %}">- Pricing</a></li>
+                      <li><a href="{% url 'blog' %}">- Blog</a></li>
+                      <li><a href="{% url 'blog' %}">- Blog Details</a></li>
+                      <li><a href="{% url 'contact' %}">- Contact</a></li>
                       <li><a href="#">- Dropdown</a>
                         <ul class="dropdown">
                           <li><a href="#">- Dropdown Item</a></li>
@@ -107,16 +108,16 @@
                       </li>
                     </ul>
                   </li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="service.html">Service</a></li>
-                  <li><a href="pricing.html">Pricing</a></li>
-                  <li><a href="#">Blog</a>
+                  <li><a href="{% url 'about' %}">About</a></li>
+                  <li><a href="{% url 'service' %}">Service</a></li>
+                  <li><a href="{% url 'pricing' %}">Pricing</a></li>
+                  <li><a href="{% url 'blog' %}">Blog</a>
                     <ul class="dropdown">
-                      <li><a href="blog.html">- Blog</a></li>
-                      <li><a href="blog-details.html">- Blog Details</a></li>
+                      <li><a href="{% url 'blog' %}">- Blog</a></li>
+                      <li><a href="{% url 'blog' %}">- Blog Details</a></li>
                     </ul>
                   </li>
-                  <li><a href="./contact.html">Contact</a></li>
+                  <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
               </div>
               <!-- Nav End -->
@@ -147,7 +148,7 @@
         <div class="col-12">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
               <li class="breadcrumb-item active" aria-current="page">Blog</li>
             </ol>
           </nav>
@@ -168,7 +169,7 @@
             <!-- Blog Thumbnail -->
             <div class="blog-thumbnail">
               <a href="./blog-details.html">
-                <img src="./img/bg-img/16.jpg" alt="">
+                <img src="{%  static 'Website/img/bg-img/16.jpg' %}" alt="">
               </a>
             </div>
             <!-- Blog Content -->
@@ -187,7 +188,7 @@
             <!-- Blog Thumbnail -->
             <div class="blog-thumbnail">
               <a href="./blog-details.html">
-                <img src="./img/bg-img/17.jpg" alt="">
+                <img src="{%  static 'Website/img/bg-img/17.jpg' %}" alt="">
               </a>
             </div>
             <!-- Blog Content -->
@@ -206,7 +207,7 @@
             <!-- Blog Thumbnail -->
             <div class="blog-thumbnail">
               <a href="./blog-details.html">
-                <img src="./img/bg-img/18.jpg" alt="">
+                <img src="{%  static 'Website/img/bg-img/18.jpg' %}" alt="">
               </a>
             </div>
             <!-- Blog Content -->
@@ -225,7 +226,7 @@
             <!-- Blog Thumbnail -->
             <div class="blog-thumbnail">
               <a href="./blog-details.html">
-                <img src="./img/bg-img/19.jpg" alt="">
+                <img src="{%  static 'Website/img/bg-img/19.jpg' %}" alt="">
               </a>
             </div>
             <!-- Blog Content -->
@@ -244,7 +245,7 @@
             <!-- Blog Thumbnail -->
             <div class="blog-thumbnail">
               <a href="./blog-details.html">
-                <img src="./img/bg-img/20.jpg" alt="">
+                <img src="{%  static 'Website/img/bg-img/20.jpg' %}" alt="">
               </a>
             </div>
             <!-- Blog Content -->
@@ -301,7 +302,7 @@
               <!-- Single News Area -->
               <div class="single-news-area d-flex align-items-center">
                 <div class="blog-thumbnail">
-                  <img src="./img/bg-img/21.jpg" alt="">
+                  <img src="{%  static 'Website/img/bg-img/21.jpg' %}" alt="">
                 </div>
                 <div class="blog-content">
                   <a href="#" class="post-title">Tooth decay: why good dental hygiene is important</a>
@@ -312,7 +313,7 @@
               <!-- Single News Area -->
               <div class="single-news-area d-flex align-items-center">
                 <div class="blog-thumbnail">
-                  <img src="./img/bg-img/22.jpg" alt="">
+                  <img src="{%  static 'Website/img/bg-img/22.jpg' %}" alt="">
                 </div>
                 <div class="blog-content">
                   <a href="#" class="post-title">Six reasons your breath might smell like poop</a>
@@ -323,7 +324,7 @@
               <!-- Single News Area -->
               <div class="single-news-area d-flex align-items-center">
                 <div class="blog-thumbnail">
-                  <img src="./img/bg-img/23.jpg" alt="">
+                  <img src="{%  static 'Website/img/bg-img/23.jpg' %}" alt="">
                 </div>
                 <div class="blog-content">
                   <a href="#" class="post-title">Everything you need to know about sinus infection</a>
@@ -334,7 +335,7 @@
 
             <!-- Single Widget Area -->
             <div class="single-widget-area adds-widget">
-              <a href="#"><img class="w-100" src="./img/bg-img/adds.png" alt=""></a>
+              <a href="#"><img class="w-100" src="{% static 'Websiste/img/bg-img/adds.png' %}" alt=""></a>
             </div>
 
           </div>
@@ -345,13 +346,13 @@
   <!-- *****Blog Area End ***** -->
 
   <!-- ***** Footer Area Start ***** -->
-  <footer class="footer-area bg-img bg-gradient-overlay" style="background-image: url(img/bg-img/3.jpg);">
+  <footer class="footer-area bg-img bg-gradient-overlay" style="background-image: url({% static 'Website/img/bg-img/3.jpg' %});">
     <div class="container">
       <div class="row">
         <!-- Single Footer Widget -->
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="single-footer-widget">
-            <a href="./index.html" class="d-block mb-4"><img src="./img/core-img/logo.png" alt=""></a>
+            <a href="./index.html" class="d-block mb-4"><img src="{% static 'Website/img/core-img/logo.png' %}" alt=""></a>
             <p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis kansa interdum dignissim.</p>
             <div class="footer-contact">
               <p><i class="icon_pin"></i> 28 Jackson Street, Chicago, 7788569 USA</p>
@@ -389,13 +390,13 @@
               <ul class="quick-links">
                 <li><a href="#">About</a></li>
                 <li><a href="#">FAQs</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
                 <li><a href="#">Policy</a></li>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Advisors</a></li>
                 <li><a href="#">Careers</a></li>
                 <li><a href="#">Dentist</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="{% url 'service' %}">Services</a></li>
                 <li><a href="#">Legals</a></li>
               </ul>
             </nav>
@@ -447,15 +448,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
   <!-- ******* All JS ******* -->
   <!-- jQuery js -->
-  <script src="js/jquery.min.js"></script>
+  <script src="{% static 'Website/js/jquery.min.js' %}"></script>
   <!-- Popper js -->
-  <script src="js/popper.min.js"></script>
+  <script src="{% static 'Website/js/popper.min.js' %}"></script>
   <!-- Bootstrap js -->
-  <script src="js/bootstrap.min.js"></script>
+  <script src="{% static 'Website/js/bootstrap.min.js' %}"></script>
   <!-- All js -->
-  <script src="js/dento.bundle.js"></script>
+  <script src="{% static 'Website/js/dento.bundle.js' %}"></script>
   <!-- Active js -->
-  <script src="js/default-assets/active.js"></script>
+  <script src="{% static 'Website/js/default-assets/active.js' %}"></script>
 
 </body>
 
