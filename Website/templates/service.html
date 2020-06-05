@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,8 +88,8 @@
                       <li><a href="{% url 'about' %}">- About Us</a></li>
                       <li><a href="{% url 'service' %}">- Service</a></li>
                       <li><a href="{% url 'pricing' %}">- Pricing</a></li>
-                      <li><a href="{% url 'blog' %}l">- Blog</a></li>
-                      <li><a href="blog-details.html">- Blog Details</a></li>
+                      <li><a href="{% url 'blog' %}">- Blog</a></li>
+                      <li><a href="{% url 'blog' %}">- Blog Details</a></li>
                       <li><a href="{% url 'contact' %}">- Contact</a></li>
                       <li><a href="#">- Dropdown</a>
                         <ul class="dropdown">
@@ -109,16 +108,16 @@
                       </li>
                     </ul>
                   </li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="service.html">Service</a></li>
-                  <li><a href="pricing.html">Pricing</a></li>
-                  <li><a href="#">Blog</a>
+                  <li><a href="{% url 'about' %}">About</a></li>
+                  <li><a href="{% url 'service' %}">Service</a></li>
+                  <li><a href="{% url 'pricing' %}">Pricing</a></li>
+                  <li><a href="{% url 'blog' %}">Blog</a>
                     <ul class="dropdown">
-                      <li><a href="blog.html">- Blog</a></li>
-                      <li><a href="blog-details.html">- Blog Details</a></li>
+                      <li><a href="{% url 'blog' %}">- Blog</a></li>
+                      <li><a href="{% url 'blog' %}">- Blog Details</a></li>
                     </ul>
                   </li>
-                  <li><a href="./contact.html">Contact</a></li>
+                  <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
               </div>
               <!-- Nav End -->
@@ -168,7 +167,7 @@
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="single-service--area text-center mb-50">
             <div class="icon--">
-              <img src="./img/core-img/s6.png" alt="">
+              <img src="{% static 'Website/img/core-img/s6.png' %}" alt="">
             </div>
             <h5>Teeth Whitening</h5>
             <p>In pretium neque a libero congue. Elit diam lectus. Prasent lacinia vitae sit
@@ -180,7 +179,7 @@
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="single-service--area text-center mb-50">
             <div class="icon--">
-              <img src="./img/core-img/s7.png" alt="">
+              <img src="{% static 'Website/img/core-img/s7.png' %}" alt="">
             </div>
             <h5>Dental Implants</h5>
             <p>In pretium neque a libero congue. Elit diam lectus. Prasent lacinia vitae sit
@@ -192,7 +191,7 @@
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="single-service--area text-center mb-50">
             <div class="icon--">
-              <img src="./img/core-img/s8.png" alt="">
+              <img src="{% static 'Website/img/core-img/s8.png' %}" alt="">
             </div>
             <h5>Missing Teeth</h5>
             <p>In pretium neque a libero congue. Elit diam lectus. Prasent lacinia vitae sit
@@ -204,7 +203,7 @@
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="single-service--area text-center mb-50">
             <div class="icon--">
-              <img src="./img/core-img/s9.png" alt="">
+              <img src="{% static 'Website/img/core-img/s9.png' %}" alt="">
             </div>
             <h5>Cosmetic Dentistry</h5>
             <p>In pretium neque a libero congue. Elit diam lectus. Prasent lacinia vitae sit
@@ -216,7 +215,7 @@
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="single-service--area text-center mb-50">
             <div class="icon--">
-              <img src="./img/core-img/s10.png" alt="">
+              <img src="{% static 'Website/img/core-img/s10.png'%}" alt="">
             </div>
             <h5>Examination</h5>
             <p>In pretium neque a libero congue. Elit diam lectus. Prasent lacinia vitae sit
@@ -228,7 +227,7 @@
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="single-service--area text-center mb-50">
             <div class="icon--">
-              <img src="./img/core-img/s6.png" alt="">
+              <img src="{% static 'Website/img/core-img/s6.png'%}" alt="">
             </div>
             <h5>Teeth Pain</h5>
             <p>In pretium neque a libero congue. Elit diam lectus. Prasent lacinia vitae sit
@@ -252,7 +251,7 @@
             <div class="single-testimonial-slide d-flex align-items-center">
               <!-- Thumbnail -->
               <div class="testimonial-thumb">
-                <img src="./img/bg-img/8.jpg" alt="">
+                <img src="{% static 'Website/img/bg-img/8.jpg' %}" alt="">
               </div>
               <!-- Content -->
               <div class="testimonial-content">
@@ -267,7 +266,7 @@
             <div class="single-testimonial-slide d-flex align-items-center">
               <!-- Thumbnail -->
               <div class="testimonial-thumb">
-                <img src="./img/bg-img/8.jpg" alt="">
+                <img src="{% static 'Website/img/bg-img/8.jpg' %}" alt="">
               </div>
               <!-- Content -->
               <div class="testimonial-content">
@@ -282,7 +281,7 @@
             <div class="single-testimonial-slide d-flex align-items-center">
               <!-- Thumbnail -->
               <div class="testimonial-thumb">
-                <img src="./img/bg-img/8.jpg" alt="">
+                <img src="{% static 'Website/img/bg-img/8.jpg' %}" alt="">
               </div>
               <!-- Content -->
               <div class="testimonial-content">
@@ -317,7 +316,7 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="single-blog-item mb-100">
             <a href="./blog-details.html">
-              <img src="./img/bg-img/4.jpg" alt="">
+              <img src="{% static 'Website/img/bg-img/4.jpg' %}" alt="">
             </a>
             <!-- Blog Content -->
             <div class="blog-content">
@@ -335,7 +334,7 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="single-blog-item mb-100">
             <a href="./blog-details.html">
-              <img src="./img/bg-img/5.jpg" alt="">
+              <img src="{% static 'Website/img/bg-img/5.jpg' %}" alt="">
             </a>
             <!-- Blog Content -->
             <div class="blog-content">
@@ -353,7 +352,7 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="single-blog-item mb-100">
             <a href="./blog-details.html">
-              <img src="./img/bg-img/6.jpg" alt="">
+              <img src="{% static 'Website/img/bg-img/6.jpg' %}" alt="">
             </a>
             <!-- Blog Content -->
             <div class="blog-content">
@@ -378,7 +377,7 @@
         <!-- Single Footer Widget -->
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="single-footer-widget">
-            <a href="./index.html" class="d-block mb-4"><img src="./img/core-img/logo.png" alt=""></a>
+            <a href="./index.html" class="d-block mb-4"><img src="{% static 'Website/img/core-img/logo.png' %}" alt=""></a>
             <p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis kansa interdum dignissim.</p>
             <div class="footer-contact">
               <p><i class="icon_pin"></i> 28 Jackson Street, Chicago, 7788569 USA</p>
@@ -474,15 +473,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
   <!-- ******* All JS ******* -->
   <!-- jQuery js -->
-  <script src="js/jquery.min.js"></script>
+  <script src="{% static 'Website/js/jquery.min.js' %}"></script>
   <!-- Popper js -->
-  <script src="js/popper.min.js"></script>
+  <script src="{% static 'Website/js/popper.min.js' %}"></script>
   <!-- Bootstrap js -->
-  <script src="js/bootstrap.min.js"></script>
+  <script src="{% static 'Website/js/bootstrap.min.js' %}"></script>
   <!-- All js -->
-  <script src="js/dento.bundle.js"></script>
+  <script src="{% static 'Website/js/dento.bundle.js' %}"></script>
   <!-- Active js -->
-  <script src="js/default-assets/active.js"></script>
+  <script src="{% static 'Website/js/default-assets/active.js' %}"></script>
 
 </body>
 
