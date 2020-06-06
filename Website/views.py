@@ -14,6 +14,9 @@ def service(request):
 def pricing(request):
 	return render(request, 'pricing.html', {})
 
+def booking(request):
+	return render(request, 'booking.html', {})
+
 def blog(request):
 	return render(request, 'blog.html', {})
 
