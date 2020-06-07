@@ -115,7 +115,7 @@
                   <li><a href="{% url 'blog' %}">Blog</a>
                     <ul class="dropdown">
                       <li><a href="{% url 'blog' %}">- Blog</a></li>
-                      <li><a href="blog-details.html">- Blog Details</a></li>
+                      <li><a href="{% url 'blog' %}">- Blog Details</a></li>
                     </ul>
                   </li>
                   <li><a href="{% url 'contact' %}">Contact</a></li>
@@ -163,7 +163,7 @@
         <div class="col-12">
           <!-- Appointment Form -->
           <div class="appointment-form">
-            <form action="#" method="post">
+            <form action="{% url 'booking' %}" method="POST">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group mb-30">
