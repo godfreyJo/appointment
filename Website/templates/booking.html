@@ -164,6 +164,7 @@
           <!-- Appointment Form -->
           <div class="appointment-form">
             <form action="{% url 'booking' %}" method="POST">
+              {% csrf_token %}
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group mb-30">
