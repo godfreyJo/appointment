@@ -7,7 +7,8 @@ class Booking(models.Model):
     emailAddress = models.EmailField(max_length=30)
     phoneNumber = models.CharField(max_length=20)
     booking_date = models.DateTimeField(auto_now_add=False, auto_now=False, blank=True, null=True)
-    timeStamp = models.DateTimeField(auto_now_add=True, auto_now=False, blank=True)
+    timeStamp = models.DateTimeField(auto_now_add=False, auto_now=False, blank=True)
 
     def __str__(self):
         return self.Fname
+
