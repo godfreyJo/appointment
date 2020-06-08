@@ -17,11 +17,12 @@ def pricing(request):
 	return render(request, 'pricing.html', {})
 
 def booking(request):
+	form = BookingForm
 	if request.method == 'POST':
-		form  =  form = BookingForm(request.POST or None)
+		form = BookingForm(request.POST or None)
 		if form.is_valid():
 			form.save()		
-	form = BookingForm
+	
 	args = {'form':form}
 	return render(request, 'booking.html', args)
 
