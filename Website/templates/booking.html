@@ -17,6 +17,10 @@
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="{% static 'Website/css/style.css' %}">
+  <!-- gijgo css -->
+  <link rel="stylesheet" href="{% static 'Website/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'Website/css/gijgo.min.css' %}">
+  
 
 </head>
 
@@ -188,13 +192,20 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group mb-30">
-                    <select name="booking_date" class="form-control">
-                      <option value="Choose Your Scheldule">Choose Your Scheldule</option>
-                      <option value="9 AM to 10 AM">9 AM to 10 AM</option>
-                      <option value="11 AM to 12 PM">11 AM to 12 PM</option>
-                      <option value="2 PM to 4 PM">2 PM to 4 PM</option>
-                      <option value="8 PM to 10 PM">8 PM to 10 PM</option>
-                    </select>
+                    <input class="form-control" type="date" id="input" width="312"> <script>
+                              $('#input').datetimepicker({uiLibrary: 'bootstrap4', iconsLibrary:'materialicons', footer: true, modal: true });
+                            </script>
+                        <!-- <select name="booking_date" class="form-control">
+                          <option value="Choose Your Scheldule"> 
+                            
+                          </option> 
+                         
+
+                          <option value="9 AM to 10 AM">9 AM to 10 AM</option>
+                          <option value="11 AM to 12 PM">11 AM to 12 PM</option>
+                          <option value="2 PM to 4 PM">2 PM to 4 PM</option>
+                          <option value="8 PM to 10 PM">8 PM to 10 PM</option>
+                        </select> -->
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -339,6 +350,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <script src="{% static 'Website/js/dento.bundle.js' %}"></script>
   <!-- Active js -->
   <script src="{% static 'Website/js/default-assets/active.js' %}"></script>
+  <!-- gijgo -->
+  <script src="{% static 'Website/js/jquery.min.js' %}" charset="utf-8"></script>
+  <script src="{% static 'Website/js/gijgo.min.js' %}" charset="utf-8"></script>
 
 </body>
 
