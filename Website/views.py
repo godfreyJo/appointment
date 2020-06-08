@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
+from Website.forms import BookingForm
 
 
 def home(request):
@@ -14,8 +15,13 @@ def service(request):
 def pricing(request):
 	return render(request, 'pricing.html', {})
 
-def booking(request):
-	return render(request, 'booking.html', {})
+def booking(self, request):
+	form = BookingForm(request.POST)
+	if form.is_valid():
+		text = form.cleaned_data['fields']
+
+	args = {'form':form, 'text':text}
+	return render(request, 'booking.html', args)
 
 def blog(request):
 	return render(request, 'blog.html', {})
