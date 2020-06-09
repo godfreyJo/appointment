@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from Website.forms import BookingForm
 from .models import Booking
@@ -19,9 +19,11 @@ def pricing(request):
 def booking(request):
 	form = BookingForm
 	if request.method == 'POST':
+		# print('Printing Post', request.POST)
 		form = BookingForm(request.POST or None)
 		if form.is_valid():
 			form.save()		
+			return redirect('/')
 	
 	args = {'form':form}
 	return render(request, 'booking.html', args)
