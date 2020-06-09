@@ -167,7 +167,7 @@
         <div class="col-12">
           <!-- Appointment Form -->
           <div class="appointment-form">
-            <form action="{% url 'booking' %}" method="POST">
+            <form action="" method="POST">
               {% csrf_token %}
               <div class="row">
                 <div class="col-md-6">
@@ -192,7 +192,7 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group mb-30">
-                    <input class="form-control" type="date" id="input" width="312"> <script>
+                    <input class="form-control" type="date"  name="date" id="input" width="312"> <script>
                               $('#input').datetimepicker({uiLibrary: 'bootstrap4', iconsLibrary:'materialicons', footer: true, modal: true });
                             </script>
                         <!-- <select name="booking_date" class="form-control">
@@ -221,7 +221,7 @@
                 </div>
                 <div class="col-12">
                   <div class="form-group mb-30">
-                    <textarea name="your-message" class="form-control" placeholder="Your Message"></textarea>
+                    <textarea name="your_message" class="form-control" placeholder="Your Message"></textarea>
                   </div>
                 </div>
                 <div class="col-12 text-center">
