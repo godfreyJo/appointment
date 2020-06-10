@@ -1,23 +1,8 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Dento - Dentist &amp; Medical HTML Template">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Title -->
-  <title>Dento - Dentist &amp; Medical HTML Template</title>
-
-  <!-- Favicon -->
-  <link rel="icon" href="{% static 'Websiste/img/core-img/favicon.ico' %}">
-
-  <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="{% static 'Website/css/style.css' %}">
-
-</head>
+{% include 'headArea.html' %}
 
 <body>
   <!-- Preloader -->
@@ -63,7 +48,7 @@
           <nav class="classy-navbar justify-content-between" id="dentoNav">
 
             <!-- Logo -->
-            <a class="nav-brand" href="index.html"><img src="{% static 'Website/img/core-img/logo.png' %}" alt=""></a>
+            <a class="nav-brand" href="{% url 'home' %}"><img src="{% static 'Website/img/core-img/logo.png' %}" alt=""></a>
 
             <!-- Navbar Toggler -->
             <div class="classy-navbar-toggler">
