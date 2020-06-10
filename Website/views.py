@@ -17,7 +17,7 @@ def pricing(request):
 	return render(request, 'pricing.html', {})
 
 def booking(request):
-	form = BookingForm
+	form = BookingForm()
 	if request.method == 'POST':
 		# print('Printing Post', request.POST)
 		form = BookingForm(request.POST or None)
